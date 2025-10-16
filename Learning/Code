@@ -32,7 +32,4 @@ store = spark.read.csv("/Volumes/workspace/default/superstore/Sample_Superstore.
 			5. If we using free version for databricks
 			 	use--> fire_df.createOrReplaceTempView("fire_service")
 				To Read Change notbook to SQL --> select * from fire_service
-
-					
-				
 				
