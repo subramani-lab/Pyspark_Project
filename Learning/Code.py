@@ -33,3 +33,14 @@ store = spark.read.csv("/Volumes/workspace/default/superstore/Sample_Superstore.
 			 	use--> fire_df.createOrReplaceTempView("fire_service")
 				To Read Change notbook to SQL --> select * from fire_service
 				
+-----------Pyspark Commonly dataframe properties---------
+Ecommerce.show(5) #Fetch data
+Ecommerce.dtypes #To fetch columns and their data dypes
+Ecommerce.schema # Return columns along with column inside Tuples
+Ecommerce.printSchema() # It's return columns along with their data type in a free format
+Ecommerce.count() # Return total number recoards
+Ecommerce.columns # Return all the columns in the dataframe
+Ecommerce.describe().show() # Return summary statistics of the dataframe
+Ecommerce.limit(10).show() # Fetch some number of recoards
+Ecommerce_Bottom_recoards = Ecommerce.orderBy(Ecommerce.columns[0], ascending=False)
+Ecommerce_Bottom_recoards.show(2) # Fetch only bottom Recoards
